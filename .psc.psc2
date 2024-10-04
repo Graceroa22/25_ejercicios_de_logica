@@ -1,0 +1,207 @@
+//1
+Funcion Mayor_de_cinco_números
+	Definir num1, num2, num3, el_mayor Como Real
+	Escribir "Ingrese un número"
+	Leer num1 
+	Escribir "Ingrese un número"
+	Leer num2
+	Escribir "Ingrese un número"
+	Leer num3
+	el_mayor = num1 
+	si num2 > el_mayor Entonces
+		el_mayor = num2
+		
+	FinSi
+	si num3 > el_mayor Entonces
+		el_mayor = num3 
+	FinSi
+	Escribir "El numero mayor es: ", el_mayor
+FinFuncion
+//2
+Funcion mayor_de_18 
+	Definir edad, puede_votar Como Entero 
+	Escribir "Ingrese su edad"
+	Leer edad
+	si edad >= 18 Entonces
+		Escribir "Usted es elegible para votar"
+	SiNo
+		Escribir "Usted es menor de edad y no puede votar"
+	FinSi
+FinFuncion
+//3
+Funcion multiplode2
+	Definir num1, num2, calculo Como Real
+	Escribir "Ingrese un número"
+	Leer num1
+	Escribir "Ingrese un número"
+	Leer num2
+	si num2 <> 0 Entonces
+		si num1 mod  num2 = 0 Entonces
+			Escribir num1 " es multiplo " num2
+		SiNo
+			Escribir num1 " no es multiplo " num2
+		FinSi
+	SiNo
+		Escribir "El segundo número que ingreses no puede ser 0 "
+	FinSi
+	
+FinFuncion
+//4
+Funcion númeropo_ne_cero
+	Definir numero_ Como Real
+	Escribir "Ingrese un número"
+	Leer numero_
+	si numero_ > 0 Entonces
+		Escribir "Este número es positivo"
+	SiNo
+		si numero_ < 0 Entonces
+			Escribir "Este número es negativo"
+		SiNo
+			si numero_ = 0 Entonces
+				Escribir "Este número es 0 "
+			FinSi
+		FinSi
+	FinSi
+FinFuncion
+//5//
+Funcion año_bisiesto
+	Definir año Como Entero 
+	Escribir "Ingrese el ano de nacimiento"
+	Leer año 
+	si año mod 4 = 0 y (( año mod 100 <> 0) o (año mod 400 = 0)) Entonces
+		Escribir  año "es un año  Bisiesto"
+	SiNo
+		Escribir año " No es un año Bisiesto "
+	FinSi
+FinFuncion
+//6
+Funcion signo_zodiacal 
+	Definir dia, mes Como entero
+	Escribir "Ingrese su mes de nacimiento del (1 al 12)"
+	Leer mes
+	Escribir "Ingrese su día de nacimiento del 1 al 31"
+	Leer dia
+	si (mes = 1 y dia >= 20) o (mes= 2 y dia <= 18) Entonces
+		escribir  "su signo zodiacal es Acuario "
+	sino
+		si (mes = 2 y dia >= 19) o (mes = 3 y dia <= 20) Entonces
+			Escribir "Su signo zodical es Piscis"
+		SiNo
+			si (mes = 3 y día >= 21) o (mes = 4 y dia <= 19) Entonces
+				Escribir "Su signo zodical es Aries"
+			SiNo
+				si (mes = 4 y día >= 20) o (mes = 5 y dia <= 20) Entonces
+					Escribir "Su signo zodical es Tauro"
+				SiNo
+					si (mes = 5 y día >= 21) o (mes = 6 y dia <= 20) Entonces
+						Escribir "Su signo zodical es Géminis"
+					SiNo
+						si (mes = 6 y día >= 21) o (mes = 7 y dia <= 22) Entonces
+							Escribir "Su signo zodical es Cáncer"
+						SiNo
+							si (mes = 7 y día >= 23) o (mes = 8 y dia <= 22) Entonces
+								Escribir "Su signo zodical es Leo"
+							SiNo
+								si (mes = 8  y día >= 23) o (mes = 9 y dia <= 22) Entonces
+									Escribir "Su signo zodical es virgo"
+								SiNo
+									si (mes = 9 y día >= 23) o (mes = 10 y dia <= 22) Entonces
+										Escribir "Su signo zodical es Libra"
+									SiNo
+										si (mes = 10 y día >= 23) o (mes = 11 y dia <= 21) Entonces
+											Escribir "Su signo zodical es Escorpio"
+										SiNo
+											si (mes = 11 y día >= 22) o (mes = 12 y dia <= 21) Entonces
+												Escribir "Su signo zodical es Sagitario"
+											SiNo
+												si (mes = 12 y día >= 22) o (mes = 1 y dia <= 19) Entonces
+													Escribir "Su signo zodical es Capricornio"
+												FinSi
+											FinSi
+										FinSi
+									FinSi
+								FinSi
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+			
+		FinSi
+	FinSi
+FinFuncion
+//7
+Funcion día_del_mes
+	Definir dia Como Entero 
+	Escribir "Ingrese un número del mes (por ejemplo, del 1 al 31) "
+	Leer dia
+	si dia <= 15 Entonces
+		Escribir "Este día pertenece a la primera quincena"
+	sino
+		si dia >= 16 Entonces
+			Escribir "Este día pertenece a la segunda quincena"
+		FinSi
+	FinSi
+FinFuncion
+//8
+Funcion dias_de_la_semana
+	Definir dia_sem Como Entero
+	Escribir "Ingrese un número del 1 al 7"
+	Leer dia_sem
+	si dia_sem = 1 Entonces
+		Escribir "Este día es Domingo"
+	SiNo
+		si dia_sem = 2 Entonces
+			Escribir "Este número equivale a Lunes"
+		SiNo
+			si dia_sem = 3 Entonces
+				Escribir "Este número equivale a Martes"
+			SiNo
+				si dia_sem = 4 Entonces
+					Escribir "Este número equivale a Miercoles"
+				SiNo
+					si dia_sem = 5 Entonces
+						Escribir "Este número equivale a Jueves"
+					SiNo
+						si dia_sem = 6 Entonces
+							Escribir "Este número equivale a Viernes"
+						SiNo
+							si dia_sem = 7 Entonces
+								Escribir "Este número equivale a Sabado"
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+			
+		FinSi
+	FinSi
+FinFuncion
+//9
+Funcion Calculadora_de_precio_con_descuento
+	Definir precio_articulo, precio_descuento, descuento, iva, total_a_pagar Como Real
+	Escribir "Ingrese el precio de su artículo"
+	Leer precio_articulo
+	Escribir "Ingrese el porcentaje de descuento (si el %)"
+	Leer descuento
+	precio_descuento = precio_articulo - (precio_articulo * descuento / 100)
+	iva = precio_descuento * 0.15 
+	total_a_pagar = precio_descuento + iva 
+	Escribir "El precio con el descuento aplicado es: ", precio_descuento
+	Escribir "El iva aplicado (15%) es: ", iva
+	Escribir "El final con iva es: ", total_a_pagar 
+FinFuncion
+//10
+Funcion Calculadora_de_sueldo_con_aumento
+	Definir salario_actual, aumento, salarionuevo Como Real
+	Escribir "Ingrese su salario actual"
+	Leer salario_actual
+	Escribir "Ingrese el porcentaje de su aumento (sin el %)"
+	Leer aumento
+	
+	salarionuevo = salario_actual + (salario_actual * aumento /100)
+	Escribir "Su nuevo salario aplicando un aumento del ", aumento " es: ", salarionuevo
+FinFuncion
+Algoritmo sin_titulo
+	númeropo_ne_cero
+FinAlgoritmo
